@@ -1,8 +1,7 @@
 # ReseauxMetaboliquesMIV
 Cours de réseaux métaboliques - promo MIV 2015
 
-Sur la droite =============>
-vous pouvez cloner le dossier dans votre ordi
+Adresse pour cloner le dossier dans votre ordi sur la droite :point_right:
 
 ```
 git clone https://github.com/.....
