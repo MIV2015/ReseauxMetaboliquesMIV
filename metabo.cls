@@ -48,9 +48,11 @@
 \NoAutoSpaceBeforeFDP % espaces devant les doubles ponctuations
 %
 \RequirePackage{graphicx}
-\RequirePackage{color}
+\RequirePackage{xcolor}
 	\definecolor{mivblue}{RGB}{0,84,150}
 	\definecolor{mivgreen}{RGB}{135,173,32}
+	\definecolor{mivboxblue}{RGB}{196,215,237}
+	\definecolor{mivboxgreen}{RGB}{183,202,121}
 \RequirePackage{titlesec}
 \titleformat*{\section}{\Large\bfseries\sffamily\color{mivblue}}
 \titleformat*{\subsection}{\large\bfseries\sffamily\color{mivblue}}
@@ -91,4 +93,8 @@
         {\flushright\noindent\ifx\@date\@empty\else\large\@date\par\fi}
         \vspace{2ex}
 }
-
+\newcommand{\mivbox}[2]{
+	\noindent\fcolorbox{white}{#1}{
+\parbox{\textwidth}
+	{#2}}
+	}
