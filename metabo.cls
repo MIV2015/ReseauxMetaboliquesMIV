@@ -50,6 +50,10 @@
 \RequirePackage{color}
 	\definecolor{mivblue}{RGB}{0,84,150}
 	\definecolor{mivgreen}{RGB}{135,173,32}
+\RequirePackage{titlesec}
+\titleformat*{\section}{\Large\bfseries\sffamily\color{mivblue}}
+\titleformat*{\subsection}{\large\bfseries\sffamily\color{mivblue}}
+\titleformat*{\subsubsection}{\itshape\bfseries\color{mivblue}}
 \RequirePackage{amsmath}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol}
@@ -82,7 +86,7 @@
 	\noindent\makebox[\linewidth]{\textcolor{mivgreen}{\rule{\linewidth}{0.7pt}}}
 	}%fi
 	
-        {\flushright\noindent\hfill\Large\bfseries\textit\@author\par}
+        {\flushright\noindent\hfill\Large\bfseries\@author\par}
         \vspace{2ex}
         {\flushright\noindent\ifx\@date\@empty\else\large\@date\par\fi}
         \vspace{2ex}
