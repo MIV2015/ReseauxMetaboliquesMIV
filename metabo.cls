@@ -31,6 +31,7 @@
 	\fancypagestyle{followingpage}{
 	\fancyhf{} % clear all six fields
 	\fancyhead[LO,RE]{\textcolor{mivblue}{UE R\'eseaux m\'etaboliques}}
+	\fancyhead[RO,LE]{\includegraphics[height=6ex]{miv_logo.png}\vspace{-13pt}}
 	\fancyfoot[LE,RO]{\thepage\,/\,\pageref{LastPage}}
 	\renewcommand{\headrulewidth}{.5pt}
 	\renewcommand{\footrulewidth}{.5pt}
@@ -86,8 +87,7 @@
 	\noindent\makebox[\linewidth]{\textcolor{mivgreen}{\rule{\linewidth}{0.7pt}}}
 	}%fi
 	
-        {\flushright\noindent\hfill\Large\bfseries\@author\par}
-        \vspace{2ex}
+        {\flushright\noindent\hfill\Large\bfseries\@author\large\par}
         {\flushright\noindent\ifx\@date\@empty\else\large\@date\par\fi}
         \vspace{2ex}
 }
