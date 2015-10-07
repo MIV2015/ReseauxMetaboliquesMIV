@@ -46,6 +46,8 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[english,frenchb]{babel}
 \NoAutoSpaceBeforeFDP % espaces devant les doubles ponctuations
+
+
 %
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
