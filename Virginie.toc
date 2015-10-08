@@ -1,0 +1,26 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction sur le m\IeC {\'e}tabolisme \& remise \IeC {\`a} niveau en enzymologie}{2}
+\contentsline {paragraph}{Objectif g\IeC {\'e}n\IeC {\'e}ral de ce cours}{2}
+\contentsline {paragraph}{Pr\IeC {\'e}-requis}{2}
+\contentsline {paragraph}{Outline}{2}
+\contentsline {subsection}{\numberline {1.1}Qu'est-ce que le m\IeC {\'e}tabolisme ?}{2}
+\contentsline {subsection}{\numberline {1.2}M\IeC {\'e}thodes pour \IeC {\'e}tudier le m\IeC {\'e}tabolisme}{5}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {subsection}{\numberline {1.3}Cin\IeC {\'e}tique enzymatique : Michaelis-Menten}{6}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{Michaelis-Menten R\IeC {\'e}versible}{7}
+\contentsline {paragraph}{Inhibition comp\IeC {\'e}titive}{8}
+\contentsline {paragraph}{Autres inhibitions}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {paragraph}{Multiples substrats et produits}{8}
+\contentsline {paragraph}{Relation de Haldane}{8}
+\contentsline {paragraph}{Cin\IeC {\'e}tique enzymatique \& Thermodynamique}{8}
+\contentsline {paragraph}{2-site cooperative binding}{9}
+\contentsline {paragraph}{Saturation}{9}
+\contentsline {paragraph}{Pour aller plus loin ...}{9}
+\contentsline {paragraph}{Pour les TP :}{9}
+\contentsline {section}{\numberline {2}Introduction \IeC {\`a} la th\IeC {\'e}orie du contr\IeC {\^o}le m\IeC {\'e}tabolique}{10}
+\contentsline {section}{\numberline {3}Titre de section du cours 3}{11}
