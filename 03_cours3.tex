@@ -3,4 +3,295 @@
 \renewcommand{\labelitemiii}{$\diamond$}
 \renewcommand{\labelitemiv}{$\ast$}
 
-\section{Titre de section du cours 3}
+\section{Cours 7 octobre}
+
+Le système métabolique fonctionne à l'état stationnaire. L'équation de l'état stationnaire est : $$N.v(X,E) = 0$$ est \textbf{invariant à une graduation arbitraire} des activités de E.
+
+Equivalent à considérer ce qui se passe lorsque l'on multiplie par un même facteur arbitraire positif (multiplier toutes les activités par le même facteur).
+
+De manière générale, revient à multiplier la fonction v (x,E) par ce facteur alpha
+$$ v(X,\alpha E) = \alpha v(X,E)  \forall \alpha \in \mathbb{R}^+ $$
+par voie de conséquence on à N.v(X,E) = 0
+==> invariante par ce genre de modification
+
+==> Lorsque l'on fait cette modification, on est toujours à l'état stationnaire
+
+Résultat: toutes les vitesses réactionnelles sont multipliées par ce facteur alpha = tous les flux sont multipliés par ce facteur alpha.
+
+Par conséquent, le vecteur de flux $J$ est une fonction homogène de $1^{er}$ ordre de l'activité de l'enzyme E : 
+$$J(\alpha E) = \alpha J(E), \hpace*{2cm}  \forall \alpha \in \mathbb{R}^+ $$
+et les concentrations $X$ sont des fonctions homogène d'ordre 0 :
+$$ X(\alpha E) = X(E), \hspace{2cm}  \forall \alpha \in \mathbb{R}^+ $$
+ 
+ 
+ 
+ 
+
+\textit{$f(\alpha x}= \alpha^n f(x)$  avec $n$= ordre de la fonction homogène }
+$X(\alpha E) = X(E)$
+
+Point technique concernant les fonction homogène : dérivation des fonctions homogènes :
+$$f(\alpha x) = \alpha ^n f(x)$$
+
+$$\somme \frac{df}{dx_i} x_i = n \alpha ^{n-1} f(x)$$
+
+\fbox{$$\somme \frac{df}{dx_i}x_i = n f(x)$$ } 
+
+
+
+
+\section{Summation relationship - Relation de sommation}
+
+Les théorèmes de sommation suivent directement par dérivation en ce qui concerne $\alpha$ :  \fbox{MAL DIT}
+
+Pour les flux, J fonction homogène d'ordre 1  de E : 
+
+$$ \sum_i \frac{ \partial Jj}{\partial E_i}E_i = J_j$$ 
+$$ \sum_i \frac{\partial J_j}{\partial E_i} \frac{E_i}{J_j}=1 $$
+J est un vecteur => peut être écrite pour toutes les composantes j
+
+$$\frac{\partial J_j}{\partial E_i}\frac{E_i}{J_j}  \Rightarrow  C_i^j $$
+relation qui lie toutes les coefficients de contrôle du flux $j$ et leurs somme est égal à :
+$$	sum_i \frac{\partial J_j}{\partial E_i}\frac{E_i}{J_j} \Rightarrow \sum_i C_i^j $$
+Le contrôle du flux est \textbf{distribué} à travers le système.
+
+
+Pour les concentrations, le vecteur des concentrations $X$ à l'état stationnaire est une fonction homogène d'ordre 0 :
+$$\fbox{\sum_i C_i^{X_j}=0}$$
+
+$$ \sum_i \frac{dX_i}{dE_i}E_i = 0 $$
+$$ \sum_i \frac{dX_j}{dEi} \frac{E_i}{X_j}=0 $$
+Le coefficient de contrôle des concentration dans la variantes normalisées
+$$ \frac{dX_j}{dEi} \frac{E_i}{X_j = C_j^{X_j} $$
+==> théorème de sommation
+
+
+\section{Les coefficients de réponse}
+La réponse linéarisée (LINEAIRE ?) du système à un changement de n'importe quel paramètre $p_i$ peut être exprimé à partir des coefficients de contrôle et des coefficients d'élasticité :
+
+$$ R_i^j = \frac{p_i}{J_j} \frac{ \partial J_j}{\partial p_i} = \frac{p_i}{J_j} \sum_k \frac{\partial J_j}{\partial E_k} \frac{\partial v_k}{\partial p_i} 
+		= \sum_k C_k^j \epsilon_i^k $$  où  $\epsilon_i^k = \frac{p_i}{v_k}\frac{\partial v_k}{\partial p_i} $
+
+sont des coefficients d'élasticité normalisées exprimant les sensibilités des taux de modifications des paramètres.
+
+Le $R_i^j$ sont appelés \textbf{coefficients de réponse}.
+
+
+$$ R_i^j = \sum_k C_k^j \epsilon_i^k $$
+La réponse du réseau dépend de deux facteurs :
+\begin{itemize}
+	\item Les sensibilités des enzymes aux paramètres $p_i$ (propriété moléculaire)
+	\item La contrôle exercé par ces enzymes sur le flux (propriétés systémiques)
+\end{itemize}
+
+On peut de similairement définir des coefficients de réponse pour les concentrations en métabolite :
+$$ R_i^{X_j} = \sum_k C_k^{X_j} \epsilon_i^k $$
+
+
+\textit{Interprétation des relations : }
+Multiplier l'activité par un même facteur alpha :
+
+le coefficient de contrôle $\sum_i C_i^j$  multiplié par :
+ si un facteur $\alpha proche$ de 1, 
+on suppose que l'on change une activité i, pr def du coefficient de contrôle le changement relatif de 
+	$$\frac{\deltaJ_j}{J_j}\simeq C_i^j \frac{\deltaE_i}{E_i}$$
+							$$ \simeq \sum C_i^j \frac{\deltaE_i}{E_i} = \sum _i C_i^j (\alpha - 1) $$
+			$$ E_i + \delta E_i = \alpha E_i $$
+			$$ \deltaE_i = (\alpha -1 ) E_i $$
+			 	
+ 	==> on a le même changement relatif
+ 	
+ 	ici on utilise des coefficients de contrôle normalisés : si = 1 , 
+ 	=0 l'activité à aucun contrôle sur le flux
+ 	Le contrôle d'un flux va être distribué entre les différents flux du système.
+ 	
+ 	Le contrôle du flux va être distribué et cela se manifeste dans cette relation. 
+ 	==> il faut agir sur toute les activités.
+ 	
+ 	Le coefficient de contrôle peut être faible mais le contrôle du flux est distribué
+ 	
+ 	
+
+
+\paragraph{Les relations de connectivité}
+
+On peut exprimer la réponse d'un système à de petits changements avec les coefficient de contrôle. 
+Calculer un coefficient de réponse du système à cette drogue :
+
+coefficient de réponse = dérivé du flux par rapport aux paramètres dans sa version normalisée
+
+avantage de normalisé (NORMEE ?) : grandeur sans dimension, =1 flux répond complètement à la drogue, = 0 flux insensible à la drogue
+
+La dérivé peut être calculée en considérant toutes les activités enzymatiques du système :
+$$ J_j = J_j(E_k(P_i)) $$
+
+
+
+\paragraph{Question} 
+coefficient de contrôle :	(mince ...) 
+coefficient d'élasticité : comment influx sur l'activité de l'enzyme
+
+Le flux est influencé par toutes les activités enzymatiques, chaque activité dépend de paramètres.
+
+Propriété moléculaire des enzymes où les vitesses réactionnelles sont fonction des concentrations ($\frac{dv}{dx}$)
+
+État stationnaire : la concentration est une variable qui dépend des paramètres et des activités
+
+Le flux $J = v[X(E),E]$, J est une fonction des activités enzymatiques uniquement mais pas une fonction des concentrations. 
+ 	
+$$ J_j = J_j(E_k(P_i))$$
+$$ \frac{J_j}{P_i}= \sum_k \frac{dJ_j}{dE_k} \frac{dE_k}{d_pi} $$
+$$ \Rightarrow \frac{dE_k}{d_pi}\text{ = sensibilité des enzymes aux paramètres }$$
+
+
+$$ R^j_i = \sum_k \frac{Ek}{J_j}\frac{dJ_j}{dE_k}\frac{P_i}{E_k}\frac{dv_k}{dp_i}  $$
+
+corr $\frac{P_i}{E_k}\frac{dv_k}{dp_i}$ dérivé d'une activité par rapport aux paramètres dans sa valeur normée = élasticité entre -1 et +1 (rarement en dehors) = sensibilité de l'activité aux paramètres 
+
+\Rightarrow définition d'élasticité, sensibilité d'une vitesse réactionnelle ou d'une activité et cela correspond à un paramètre
+
+Elasticité = 1 : stimule l'activité, =-1 : inhibe l'activité, plus faible : faible inhibition ou stimulation
+
+
+\textbf{Exemple :}
+$$ v = v(x_i, E) = E f(x) \text{(pté d'homogénéité)} $$
+ en faisant intervenir une droque $p$ (variable supplémentaire) :
+	$$ v = v(x_i, E, p) $$
+Par définition, l'élasticité $\epsilon_p^v = \frac{p}{v} \frac{dv}{dp}$, on a les paramètres $E$ et $P$, on peut définir une sensibilité de la vitesse réactionnelle :
+	$$ \epsilon_E^v = \frac{E}{v}\frac{dv}{dE}=1 $$
+
+Donc ici (diapo), plus précis d'écrire :
+	$$ \frac{dJ_j}{dE_k}\frac{dE_k}{dv_k}\frac{dv_k}{dp_i} $$
+	
+\begin{tabular}{c|c|c}
+	$\frac{Ek}{J_j} \frac{dJ_j}{dE_k}$	&	$\frac{v_k}{E_k}\frac{dE_k}{dv_k}$	&	$\frac{p_i}{v_k}\frac{dv_k}{dp_i}$ \\
+	$\rightarrow$ coefficient de contrôle	&	$\rightarrow =  1$	&	$ = \epsilon$ \\
+\end{tabular} 
+
+
+
+$R_i^j$ : coefficient de réponse = somme des termes qui font intervenir les coefficients de contrôle et les sensibilités individuelles des enzymes aux paramètres (il faut une élasticité suffisante $+$ une enzyme cible de la drogue et un contrôle sur le système)
+
+\Rightarrow il permet de quantifier la réponse d'un système à une perturbation.
+
+Pour réponse significative : cible(s) soient sensible(s) + dites cibles aient un contrôle sur le système
+
+
+
+
+\section{Les relations de connectivité}
+Théorème de connectivité : et en relation les coefficients de contrôle et les élasticités
+
+$$\Gamma = -L . \textgoth{J}^{-1}.N^0 $$
+$$ \Rightarrow \Gamma . \frac{\partial v}{\partial x} . L = - L $$
+
+
+$dv/dx$ : réactivité du système à ce changement
+
+La matrice de lien permet de passer de la matrice $N^0$ à la matrice de stœchiométrique complète $N$.
+
+permet de dérire $\frac{dx}{dx^0}= L= (\frac{I}{/////})$ (matrice)
+	$$ \frac{dx^0}{dt}= N^0v $$
+	$$ \textgoth{J} = N^0 \frac{dv}{dx}L $$
+
+$\Gamma$ : multiplié par $dv/dx$, lorsque toutes les variables sont indépendantes, la matrice de lien = matrice identité
+
+
+$$ \Phi = I + \frac{\partial v}{\partial x} . \Gamma $$
+$$ \Rightarrow    \Phi . \frac{\partial v}{\partial x} . L = 0 $$
+
+
+$\phi$ : 
+==> manière d'exprimer les relations
+
+
+\paragraph{Les relations de connectivité}
+Lorsque l'on utilise des élasticités normalisées, les relations de connectivité peuvent être exprimés avec les variables indépendantes $x_i^0$ :
+$$ \epsilon_i^k = \frac{x_i^0}{v_k} \frac{\partial v_k}{\partial x_i^0} $$
+
+\begin{equation}
+   \fbox{$
+   \begin{array}{rcl}
+      \sum_k C_k^{X_j} \epsilon_i^k & = & - \delta_{ij} \\
+      \sum_k C_k^j \epsilon_i^k & = & 0
+   \end{array}
+   $}
+\end{equation}
+
+où $\delta_{ij}$ est le coefficients de Kronecker :  $\delta_{ij} = $
+
+   \left \{
+   \begin{array}{r c l}
+      1\text{ if }i  & = & j \\
+      0\text{ if }i & \neq & j
+   \end{array}
+   \right .
+
+
+\paragraph{Les relations de connectivités}
+$$ \sum_k C_k^{X_j} \epsilon_i^k & = & - \delta_{ij} $$
+$$ \sum_k C_k^j \epsilon_i^k & = & 0 $$
+Ces relations peuvent être interprétées en terme de \textbf{réponse du système interne} à la perturbation $x_i^0$.
+
+Ils sont nécessaire à la \textbf{stabilité du système} :
+\begin{itemize}
+	\item Le système contre/empêche les fluctuations de $x_i^0$
+	\item Le reste du système est insensible à ces fluctuations à l'approximation du $1^{er}$ ordre
+\end{itemize}
+
+
+
+
+
+\paragraph{Explications}
+Dans le cas d'une matrice de rang maximum :
+$$ \Gamma \frac{dv}{dx}= -I $$
+$ \sum C_k^{X_j}\frac{dv_k}{dX_i}= $	\textbf{-1} (terme diagonaux si $i=j$) \textbf{ou} 	\textbf{0} si $i \neq j$
+
+k = réaction donc une activité, 
+
+\textbf{flux}: pour une réaction k, vitesse réactionnelle et définir un flux dépend des paramètres et qui correspond à la vitesse des paramètres obtenus à l'état stationnaire
+
+$C_k^j$ : $j$ une réaction enzymatique et $j$ le flux cible
+
+$C_k^{X_j}$ : une réaction qui contrôle la concentration $j$ (mal dit)
+
+Dans le cas des coefficient de réponse : réponse à un paramètre extérieur alors que dans T connectivité :  à des changements internes (concentration d'un métabolites particulier)
+==> interprétation physique
+
+Relation : exprimant la réponse du système à des fluctuations sur les temps, au premier ordre, la répercution sur le reste du système va être nu à l'exception de la réponse de $X_i$ à ces propres fluctuations => ces relations sont nécessaire pour la stabilité du système
+
+Stabilité: valeur propres jacobienne
+
+Ce que l'on interprète : le système à l'état stationnaire réagit aux fluctuations sur les temps et il a tendance à contré les fluctuations. Si fluctuation d'une concentration, il contre la fluctuation. 
+
+
+
+\paragraph{Résumé de la séance :}
+\begin{itemize}
+	\item La réponse du système dépend à la fois des propriétés individuelles des enzymes du système et de la structure du système. On est capable de séparer les deux.
+	
+
+	\item \textbf{Les flux métaboliques sont contraints} à une faible dimension dans le sous-espace parce que le pool de métabolites  s'équilibre à l'état stationnaire
+	\begin{itemize}
+		\item Les flux métaboliques sont contraints par la condition de stationnarité. Cette contrainte correspond à la condition que les pulls métaboliques n'évoluent plus (somme entrant = somme sortant), beaucoup moins de flux indépendant que de arg
+	\end{itemize}
+	
+	
+	\item Le contrôle du flux est généralement \textbf{distribué} à travers le système (pas de 'bottleneck')
+	\begin{itemize}
+		\item C'est important pour la biotechnologie et la pharmacologie
+		\item un bottleneck, une réaction qui contrôle tout un flux est rare, le flux est distribué.  Ex: augmenter un produit, nécessite de toucher à plusieurs enzymes
+	\end{itemize}
+
+	\item Le comportement du système peut être considéré sous un principe général d'\textbf{action-réaction} :
+	\begin{itemize}
+		\item Il tamponne généralement les changements imposés de l'extérieur
+		\item Il neutralise les fluctuations internes
+		\item \textit{Notion de coefficient de contrôle, action = réagit sur activité enzymatique, et réaction = résultat moindre que celui attendu après l'action.}
+	\end{itemize}
+\end{itemize}
+
+
+
+\end{document}
