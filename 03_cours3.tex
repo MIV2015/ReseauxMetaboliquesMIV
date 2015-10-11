@@ -7,7 +7,7 @@
 
 Le système métabolique fonctionne à l'état stationnaire. L'équation de l'état stationnaire est : $$N.v(X,E) = 0$$ est \textbf{invariant à une graduation arbitraire} des activités de E.
 
-Equivalent à considérer ce qui se passe lorsque l'on multiplie par un même facteur arbitraire positif (multiplier toutes les activités par le même facteur).
+Équivalent à considérer ce qui se passe lorsque l'on multiplie par un même facteur arbitraire positif (multiplier toutes les activités par le même facteur).
 
 De manière générale, revient à multiplier la fonction v (x,E) par ce facteur alpha
 $$ v(X,\alpha E) = \alpha v(X,E)  \forall \alpha \in \mathbb{R}^+ $$
@@ -19,23 +19,23 @@ par voie de conséquence on à N.v(X,E) = 0
 Résultat: toutes les vitesses réactionnelles sont multipliées par ce facteur alpha = tous les flux sont multipliés par ce facteur alpha.
 
 Par conséquent, le vecteur de flux $J$ est une fonction homogène de $1^{er}$ ordre de l'activité de l'enzyme E : 
-$$J(\alpha E) = \alpha J(E), \hpace*{2cm}  \forall \alpha \in \mathbb{R}^+ $$
+$$J(\alpha E) = \alpha J(E), \text{.....}  \forall \alpha \in \mathbb{R}^+ $$
 et les concentrations $X$ sont des fonctions homogène d'ordre 0 :
-$$ X(\alpha E) = X(E), \hspace{2cm}  \forall \alpha \in \mathbb{R}^+ $$
+$$ X(\alpha E) = X(E), \text{.....}  \forall \alpha \in \mathbb{R}^+ $$
  
  
  
  
 
-\textit{$f(\alpha x}= \alpha^n f(x)$  avec $n$= ordre de la fonction homogène }
+\textit{$f(\alpha x = \alpha ^n f(x)$  avec $n=$ ordre de la fonction homogène }
 $X(\alpha E) = X(E)$
 
 Point technique concernant les fonction homogène : dérivation des fonctions homogènes :
 $$f(\alpha x) = \alpha ^n f(x)$$
 
-$$\somme \frac{df}{dx_i} x_i = n \alpha ^{n-1} f(x)$$
+$$	\sum \frac{df}{dx_i} x_i = n \alpha ^{n-1} f(x)$$
 
-\fbox{$$\somme \frac{df}{dx_i}x_i = n f(x)$$ } 
+\fbox{$\sum \frac{df}{dx_i} x_i = n f(x)$} 
 
 
 
@@ -52,17 +52,18 @@ J est un vecteur => peut être écrite pour toutes les composantes j
 
 $$\frac{\partial J_j}{\partial E_i}\frac{E_i}{J_j}  \Rightarrow  C_i^j $$
 relation qui lie toutes les coefficients de contrôle du flux $j$ et leurs somme est égal à :
-$$	sum_i \frac{\partial J_j}{\partial E_i}\frac{E_i}{J_j} \Rightarrow \sum_i C_i^j $$
+$$	\sum_i \frac{\partial J_j}{\partial E_i}\frac{E_i}{J_j} \Rightarrow \sum_i C_i^j $$
 Le contrôle du flux est \textbf{distribué} à travers le système.
 
 
 Pour les concentrations, le vecteur des concentrations $X$ à l'état stationnaire est une fonction homogène d'ordre 0 :
-$$\fbox{\sum_i C_i^{X_j}=0}$$
+\fbox{$\sum_i C_i^{X_j}=0$}
+
 
 $$ \sum_i \frac{dX_i}{dE_i}E_i = 0 $$
 $$ \sum_i \frac{dX_j}{dEi} \frac{E_i}{X_j}=0 $$
 Le coefficient de contrôle des concentration dans la variantes normalisées
-$$ \frac{dX_j}{dEi} \frac{E_i}{X_j = C_j^{X_j} $$
+$$ \frac{dX_j}{dEi} \frac{E_i}{X_j} = C_j^{X_j} $$
 ==> théorème de sommation
 
 
@@ -94,10 +95,10 @@ Multiplier l'activité par un même facteur alpha :
 le coefficient de contrôle $\sum_i C_i^j$  multiplié par :
  si un facteur $\alpha proche$ de 1, 
 on suppose que l'on change une activité i, pr def du coefficient de contrôle le changement relatif de 
-	$$\frac{\deltaJ_j}{J_j}\simeq C_i^j \frac{\deltaE_i}{E_i}$$
-							$$ \simeq \sum C_i^j \frac{\deltaE_i}{E_i} = \sum _i C_i^j (\alpha - 1) $$
-			$$ E_i + \delta E_i = \alpha E_i $$
-			$$ \deltaE_i = (\alpha -1 ) E_i $$
+	$$\frac{\delta J_j}{J_j} \simeq C_i^j \frac{\delta E_i}{E_i}$$
+	$$ \simeq \sum C_i^j \frac{\delta E_i}{E_i} = \sum _i C_i^j (\alpha - 1) $$
+	$$ E_i + \delta E_i = \alpha E_i $$
+	$$ \delta E_i = (\alpha -1 ) E_i $$
 			 	
  	==> on a le même changement relatif
  	
@@ -148,7 +149,7 @@ $$ R^j_i = \sum_k \frac{Ek}{J_j}\frac{dJ_j}{dE_k}\frac{P_i}{E_k}\frac{dv_k}{dp_i
 
 corr $\frac{P_i}{E_k}\frac{dv_k}{dp_i}$ dérivé d'une activité par rapport aux paramètres dans sa valeur normée = élasticité entre -1 et +1 (rarement en dehors) = sensibilité de l'activité aux paramètres 
 
-\Rightarrow définition d'élasticité, sensibilité d'une vitesse réactionnelle ou d'une activité et cela correspond à un paramètre
+$\Rightarrow$ définition d'élasticité, sensibilité d'une vitesse réactionnelle ou d'une activité et cela correspond à un paramètre
 
 Elasticité = 1 : stimule l'activité, =-1 : inhibe l'activité, plus faible : faible inhibition ou stimulation
 
@@ -172,7 +173,7 @@ Donc ici (diapo), plus précis d'écrire :
 
 $R_i^j$ : coefficient de réponse = somme des termes qui font intervenir les coefficients de contrôle et les sensibilités individuelles des enzymes aux paramètres (il faut une élasticité suffisante $+$ une enzyme cible de la drogue et un contrôle sur le système)
 
-\Rightarrow il permet de quantifier la réponse d'un système à une perturbation.
+$\Rightarrow$ il permet de quantifier la réponse d'un système à une perturbation.
 
 Pour réponse significative : cible(s) soient sensible(s) + dites cibles aient un contrôle sur le système
 
@@ -190,7 +191,7 @@ $dv/dx$ : réactivité du système à ce changement
 
 La matrice de lien permet de passer de la matrice $N^0$ à la matrice de stœchiométrique complète $N$.
 
-permet de dérire $\frac{dx}{dx^0}= L= (\frac{I}{/////})$ (matrice)
+permet de dérire $\frac{dx}{dx^0}= L= (\frac{I}{roooooh})$ (matrice)
 	$$ \frac{dx^0}{dt}= N^0v $$
 	$$ \textgoth{J} = N^0 \frac{dv}{dx}L $$
 
@@ -218,19 +219,14 @@ $$ \epsilon_i^k = \frac{x_i^0}{v_k} \frac{\partial v_k}{\partial x_i^0} $$
    $}
 \end{equation}
 
-où $\delta_{ij}$ est le coefficients de Kronecker :  $\delta_{ij} = $
+où $\delta_{ij}$ est le coefficients de Kronecker :  $\delta_{ij} = 1\text{ if } i  = j $
+et $\delta_{ij} = 0 \text{ if }i  \neq  j $
 
-   \left \{
-   \begin{array}{r c l}
-      1\text{ if }i  & = & j \\
-      0\text{ if }i & \neq & j
-   \end{array}
-   \right .
 
 
 \paragraph{Les relations de connectivités}
-$$ \sum_k C_k^{X_j} \epsilon_i^k & = & - \delta_{ij} $$
-$$ \sum_k C_k^j \epsilon_i^k & = & 0 $$
+$$ \sum_k C_k^{X_j} \epsilon _i^k  =  - \delta_{ij} $$
+$$ \sum_k C_k^j \epsilon_i^k  =  0 $$
 Ces relations peuvent être interprétées en terme de \textbf{réponse du système interne} à la perturbation $x_i^0$.
 
 Ils sont nécessaire à la \textbf{stabilité du système} :
@@ -291,7 +287,3 @@ Ce que l'on interprète : le système à l'état stationnaire réagit aux fluctu
 		\item \textit{Notion de coefficient de contrôle, action = réagit sur activité enzymatique, et réaction = résultat moindre que celui attendu après l'action.}
 	\end{itemize}
 \end{itemize}
-
-
-
-\end{document}
