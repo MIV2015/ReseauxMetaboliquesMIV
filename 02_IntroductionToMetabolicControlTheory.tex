@@ -123,11 +123,76 @@ Il est possible d'obtenir un traitement général de la théorie du contrôle du
 \end{itemize}
 
 
-\paragraph{Evolution du système}
+\paragraph{Évolution du système}
 L'évolution du vecteur de concentration $x$ du système est une fonction simple du vecteur de vitesse $v$ :
-$$ \frac{dx}{dt}=N.v(x,p)$$ où $p$ est un vecteur de paramètres, incluant l'activité des enzymes.
+
+\fbox{ $ \frac{dx}{dt}=N.v(x,p)$} où $p$ est un vecteur de paramètres, incluant l'activité des enzymes.
 
 La Jacobienne est :	$$ \textswab{J}  = N. \frac{ \partial v}{\partial x}     $$
 
+$\frac{\partial v_i}{\partial x_j} $ : 'élasticités' non-normalisées
 
 
+\paragraph{Contraintes des flux à l'état stationnaire}
+Nous sommes intéressé par l'analyse de l'état stationnaire du système :
+		$$ dx/dt = N . v(X(p),p) = 0 $$
+où $X(p)$ est le vecteur des concentrations à l'état stationnaire.
+
+L'état stationnaire introduit des \textbf{dépendances linéaires} entre les flux : 
+$$ N. J(p) = 0 $$
+Loi de Kirchhoff pour les métabolites intermédiaires 
+
+Donc le vecteur de flux $J$ peut être exprimés dans la base de $Ker(N)$ (souvent appelé $K$) 
+
+
+\paragraph{Contrôle de l'expression systémique}
+
+Faisons la différence entre l'équation de l'état d'équilibre par rapport à $p$ :
+$$ N . \frac{\partial v}{\partial x} . \frac{ \partial X}{\partial p} + N . \frac{\partial v}{\partial p} = 0 $$
+\fbox{$ \frac{\partial X}{\partial p} = - (N. \frac{\partial v}{\partial x})^{-1} . N . \frac{\partial v}{\partial p} $}
+
+\fbox{$ \frac{\partial X}{\partial p} = - \textswab{J}^{-1} . N . \frac{\partial v}{\partial p} $}
+
+Cette équation relie les \textbf{changements systémiques} dans l'état stationnaire des concentrations $X$ aux changements de vitesse $v$.
+
+La matrice $ \Gamma = - (N. \frac{\partial v}{\partial x})^{-1} . N  = - \textswab{J}^{-1} . N $ contient tous les \textbf{coefficient de contrôle des concentrations}.
+
+
+\paragraph{Contrôle des flux}
+Let us calculate the resulting steady-state flux : (MAL DIT) 
+	$$ J=c(X(p),p) $$
+and differentiate it respect to $p$ :
+\begin{align*}
+	\partial J / \partial p & = \partial v / \partial x . \partial X / \partial p + \partial v / \partial p \\
+							& = ( \partial v / \partial x . \Gamma + I ) . \partial v/ \partial p 
+\end{align*}
+
+Cette équation relie les changements systémiques dans l'état stationnaire des flux $J$ aux changements de vitesses $v$.
+
+La matrice $ \Phi = I + \partial v / \partial x . \Gamma $ contient tous les \textbf{coefficients de contrôle du flux}. 
+
+
+
+\paragraph{Généralisation}
+Si le système montre des \textbf{relations de conservation} comme $[ATP]+[ADP]+[AMP] = constante$, nous devons réduire la matrice $N$ à la matrice $N^0$ avec un rang maximal correspondant à une molarité des métabolites indépendants $x^0$.
+\begin{align*}
+	N & = L. N^0 \\
+	dx^0/dt &= N^0 . v(x,p) \\
+	\textswab{J} &= N^0 . \partial v / \partial x . L \\
+	\Gamma & = - L . \textswab{J} ^{-1} . N^0 \\
+	\Phi = I + \partial v / \partial x . \Gamma
+\end{align*}
+
+
+
+
+\paragraph{Coefficients de contrôle normalisé}
+
+Il est de coutume d'exprimer le contrôle en termes de coefficients de contrôle \textbf{normalisés} sans dimension :
+
+\begin{tabular}{rr}
+	Contrôle du flux	&	$C_i^j = \frac{E_i}{J_j} \frac{\partial J_j}{\partial E_i } = \frac{\partial ln J_j}{\partial ln E_i}$ \\
+	Contrôle des concentrations	&	$C_i^{X_j} = \frac{E_i}{X_j} \frac{\partial X_j}{\partial E_i } = \frac{\partial ln X_j}{\partial ln E_i}	$ \\
+\end{tabular}
+
+où les paramètres $E_i$ dénote les \textbf{activités enzymatiques}, en général exprimé dans les mêmes unités que $J_i (M.s^{-1})$.
