@@ -3,4 +3,76 @@
 \renewcommand{\labelitemiii}{$\diamond$}
 \renewcommand{\labelitemiv}{$\ast$}
 
-\section{Titre de section du cours 3}
+\section{cours 3 - Simon}
+
+\paragraph{}Aujourd'hui on va voir deux théorèmes très généraux qui lient ces coefficients de contrôle.
+\begin{enumerate}
+\item théorème sur la somme des coefficients de contrôle;
+\item théorème de connectivité qui associe les coefficients de contrôle et les elasticités.
+\end{enumerate}
+
+\subsection{Théorème sur la somme}
+
+\paragraph{}On part toujours de l'équation de base qui est celle qui écrit que le système métabolique fonctionne à l'état stationnaire (maintenant vous devez avoir l'habitude de cette équation):
+$$N.v(X,E)=0$$
+Un point particulièrement important à noter sur cette équation c'est de considérer ce qui se passe lorsque l'on multiplie toutes les activités par un même facteur $\alpha$ connu. Vous voyez l'idée ? C'est qu'on a un système métabolique à l'état stationnaire et puis on se demande ce qu'il se passe si on multiplie toutes les activités de tous les enzymes par le même facteur. \\
+De manière générale, cela revient à multiplier la fonction $v(X,E)$ par ce facteur $\alpha$. Cela veut simplement dire que la vitesse réactionnelle est proportionnelle à l'activité de l'enzyme. Donc on a :
+$$v(x,\alpha E) = \alpha v(X,E)$$
+Pour rappel $E$ est le vecteur qui contient toutes les activités des enzymes. Ce que l'on remarque c'est que par voie de conséquence on a 
+$$N.v(X,\alpha E)=0$$
+Donc le point important c'est que l'équation de stationnarité est invariante par rapport à ce genre de transformation qui consiste à multiplier toutes les activités par le même facteur.\\
+Lorsqu'on fait cette opération, on est toujours en état stationnaire et donc les concentrations des métabolites à l'état stationnaire restent inchangés. Puisque le même vecteur $X$ est la solution à la fois de $N.v(X,E)=0$ et de $\alpha N.v(X,E)=0$.\\
+D'une part toutes les vitesses réactionnelles sont multipliées par ce facteur $\alpha$, donc le flux est multiplié par ce facteur $\alpha$, donc le vecteur de flux est une fonction homogène du premier ordre des activités. C'est à dire que :
+$$J(\alpha E) = \alpha J(E)$$
+
+\mivbox{mivboxgreen}{Je ne sais pas si vous êtes familiers avec les fonctions homogènes mais une fonction homogène tel que :
+$$f(\alpha x) = \alpha^{n}f(x)$$
+$n$ c'est l'ordre de la fonction homogène.
+}
+
+\paragraph{}Donc ici on a le flux qui est une fonction homogène du premier ordre des activités et puis puisque les concentrations ne bougent pas, elle sont aussi une fonction homogène d'ordre 0 des activités.
+$$X(\alpha E) = X(E)$$
+Et ceci quel que soit le facteur $\alpha$ par lequel on multiplie toutes les activités du système.\\
+
+\mivbox{mivboxgreen}{
+Un point technique qui va nous être utile concernant les fonctions homogènes concerne la dérivation des fonction homogènes. Donc ici on va prendre le cas général où f est une fonction vectorielle d'un vecteur x. On peut dériver cette expression par rapport à $\alpha$. Donc on fait :
+$$\sum{\frac{\partial f}{\partial x_{i}}x_{i}}=n \alpha^{n-1}f(x)$$
+\textit{En français : somme de df sur toutes les composantes du vecteur $x$ et ensuite dériver chaque terme $\alpha x_{i}$ par rapport à $\alpha$, c'est à dire que ce sera multiplié par $x_{i}$... en dérivant le terme de gauche par rapport à $\alpha$ et à droite on a tout simplement n $\alpha$ puissance $n-1$ $f(x)$.}\\
+Et comme je disais ces expressions sont valables quelque soit la valeur de $\alpha$ donc on peut prendre par exemple $\alpha=1$ et on a donc l'expression remarquable qui est :
+$$\sum{\frac{\partial f}{\partial x_{i}}x_{i}}=n f(x)$$
+Donc ça c'est une propriété des fonctions homogènes pour dériver une fonction homogène par rapport à ... on verra par la suite ... qui lie les dérivés premières. Ce qui apparaît ici, c'est l'ordre de la fonction homogène : le $n$ à droite.
+}
+\paragraph{}On va utiliser directement cette gymnastique sur les fonctions homogènes et on va voir ce que ça va nous donner.\\
+Donc voilà l'exercice! Je vous rappelle on avait par exemple\\
+\begin{center}$J = $ fonction homogène d'ordre 1 des activités ($E$)\end{center}
+Et donc :
+$$\sum_{i}{\frac{\partial J_{i}}{\partial E_{i}}E_{i}=N J_{j}} \text{\qquad , où $N$ vaut 1}$$
+Donc $J$ je vous rappelle c'est un vecteur et donc on peut l'écrire pour toutes les composantes du vecteur par exemple pour la composante particulière $_{j}$.\\
+On peut diviser à gauche et à droite par le flux que l'on considère non nul pour un système métabolique qui fonctionne avec un flux non nul. Donc on a :
+$$\sum_{i}{\frac{\partial J_{j}}{\partial E_{i}}\frac{E_{i}}{J_{j}} = 1}$$
+Donc ce 1, c'est l'ordre de la fonction homogène. Ce qu'on reconnaît dans la somme c'est précisément ce dont j'avais introduit la définition il y a quelques minutes, c'est le coefficient de contrôle du flux $J$ par la réaction $_{i}$ dans sa version normalisée, notée $C_{i}^{j}$.\\
+Donc on est bien arrivé à un résultat remarquable où on a une relation qui lie tous les coefficients de contrôle du flux $J$ et leur somme est égale identiquement à 1.\\
+Après on viendra sur l'interprétation de cette relation de sommation mais si on continue exactement de la même manière sur les concentrations on a :
+
+\begin{center} Vecteur des concentrations à l'état stationnaire = fonction homogène d'ordre 0 des activités
+\end{center}
+
+Donc ça se décline exactement pareil :
+$$\sum_{i}{\frac{\partial X_{j}}{\partial E_{i}}E_{i} = 0}$$
+On peut tout aussi bien diviser tous les termes de la somme par $X_{j}$ et donc on a :
+$$\sum_{i}{\frac{\partial X_{j}}{\partial E_{i}}\frac{E_{i}}{X_{j}} = 0}$$
+Et à gauche, on reconnaît les coefficients de contrôle de concentrations dans la version normalisée : $C_{i}^{X_{j}}$\\
+Ce qui veut dire que la somme des coefficients de contrôle sur toutes les activités $_{i}$ sur un métabolique particulier $_{j}$ est identiquement nulle : $\sum_{i}{C_{i}^{X_{j}}}=0$\\
+
+\paragraph{}Comment va t-on interpréter ces relations ? Précisément, elles ont à voir avec l'expérience par la pensée que je mentionnais tout à l'heure qui consiste à multiplier toutes les activités par un facteur $\alpha$. Par définition du coefficient de contrôle :
+$$\frac{\delta J_{j}}{J_{j}} \sim C_{i}^{j}\frac{\delta E_{i}}{E_{i}}$$
+\textit{En français : le changement relatif delta Jj sur Jj est asymptotiquement égale au coefficient de contrôle Cij que multiplie le changement d'activité delta Ei sur Ei}
+
+\paragraph{}De manière plus générale, par linéarité, on a :
+$$\frac{\delta J_{j}}{J_{j}} \sim \sum{C_{}^{}\frac{\delta E_{i}}{E_{i}}}$$
+\textit{En français : delta Jj qui est asymptotiquement égale à la somme des produits des coefficients de contrôle que multiplie les changement relatifs des différentes activités}
+
+\paragraph{}Lorsque tous ces changements relatifs sont égaux, c'est à dire qu'on écrit (on avait multiplié par $\alpha$ donc on a) :
+$$E_{i} + \delta E_{i} = \alpha E_{i}$$
+$$\delta E_{i} = (\alpha - 1) E_{i}$$
+Donc si tous les changements ont le même facteur de proportionnalité, donc ce qu'on avait [19min47 B01]
