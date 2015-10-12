@@ -1,0 +1,69 @@
+% \textswab{J}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\ast$}
+
+\section{Cours X  Amorce pour l'analyse de stabilité : Analyse de la stabilité des systèmes métaboliques}
+
+\paragraph{La Jacobienne $\textswab{J}$ d'un système différentiel}
+Considérons un système d'équation différentielles ordinaires (ODEs) : 
+$$ dx/dt = f(x) $$
+Nous définissons sa matrice Jacobienne comme la matrice de ses dérivées partielles :
+$$ \textswab{J} = \partial f / \partial x $$
+qui est une matrice carré.
+
+
+\paragraph{Évolution du système autour de l'état stationnaire}
+Considérons maintenant le système autour d'un état stationnaire $X$ :
+$$ dx/dt(X) = f(X)=0$$
+Dans le voisinage de $X$, nous pouvons utiliser l'approximation de premier ordre
+$$ dx/dt \sim \textswab{J} . [x-X] $$
+qui intègre dans
+$$ x-X = exp( \textswab{J}t) . [x(0)-X] $$
+en utilisant la matrice exponentielle
+$$ exp( \textswab{J}t) = \sum_{k=0}^{\inf} \frac{1}{k!} \textswab{J}^k t^k $$
+
+
+
+\paragraph{Conditions de stabilité autour de l'état stationnaire}
+Considérons les valeurs propres $\lambda_i$ de la matrice Jacobienne, 
+
+L'état stationnaire est instable si : $$ \exists_i, Re(\lambda_i)>0 $$
+
+L'état stationnaire est exponentiellement stable \fbox{MAL DIT} si : $$ \exists_i, Re(\lambda_i)<0 $$
+
+avec un temps de relaxation $\tau_i = \frac{1}{|Re(\lambda_i)|}$ 
+et une fréquence $ \omega_i = \frac{|Im(\lambda_i)|}{2\pi} $
+
+
+
+\paragraph{Bifurcations}
+Considérons les valeurs propres $\lambda_i(p)$ de la matrice Jacobienne quand les paramètres varient.
+
+Un bifurcation nœud-selle correspond au passage par zéro d'une valeur propre réelle $\lambda_i$
+
+Une bifurcation de Hopf correspond à un passage par zéro de la partie réelle $Re(\lambda_i)$ d'une paire de valeurs propres conjuguées $ Re(\lambda_i) \pm 2i\pi\omega_j $
+
+Il existe plusieurs autres types de bifurcation plus complexes.
+
+
+
+\paragraph{Jacobienne d'un système métabolique}
+A partir de l'équation d'évolution 
+$$dx/dt = N . v(x,p) $$
+nous dérivons la Jacobienne 
+$$ \textswab{J} = N. \partial v / \partial x $$
+
+
+Cependant cette Jacobienne est singulière si $N$ n'est pas de rang maximal. Il est alors utile de réduire le système à des variables indépendantes :
+\begin{tabular}{lc}
+			&	$dx^0/dt = N^0 . v(x,p)$ \\
+	with	&	$N=L.N^0$	\\
+			&	$\partial x / \partial x^0=L $
+\end{tabular}
+et nous dérivons la Jacobienne :
+$$ \textswab{J}=N^0 . \partial v / \partial x . L $$
+qui doit être définie négative pour que le système soit stable.
+
